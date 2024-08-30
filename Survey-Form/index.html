@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1 id="title">Survey Form</h1>
+  <p id="description">Complete with your details</p>
+  
+  <form id="survey-form" method="post" action="/submit">
+    <fieldset>
+      <legend>Personal Information</legend>
+      
+      <label for="name" id="name-label">Name:
+        <input placeholder="Enter your Name..." required id="name" type="text" />
+      </label>
+
+      <label for="email" id="email-label">Email:
+        <input placeholder="Enter your Email..." required id="email" type="email" />
+      </label>
+
+      <label for="number" id="number-label">Age:
+        <input placeholder="Age..." required id="number" type="number" min="15" max="40" />
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Additional Information</legend>
+      
+      <p>Do you already have a registration with us?</p>
+      <select id="dropdown">
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+
+      <p>Are you satisfied with our services?</p>
+      <label>
+        <input value="Sure" name="satisfaction" type="radio" />
+        Sure
+      </label>
+      <label>
+        <input value="No" name="satisfaction" type="radio" />
+        No
+      </label>
+
+      <p>Would you recommend our services to a friend?</p>
+      <label>
+        <input type="checkbox" value="yes" />
+        Yes
+      </label>
+      <label>
+        <input type="checkbox" value="maybe" />
+        Maybe
+      </label>
+      <label>
+        <input type="checkbox" value="no" />
+        No
+      </label>
+
+      <p>Any comments or suggestions?</p>
+      <textarea placeholder="Leave your comment here..."></textarea>
+    </fieldset>
+    
+    <button id="submit">Submit</button>
+  </form>
+</body>
+</html>
